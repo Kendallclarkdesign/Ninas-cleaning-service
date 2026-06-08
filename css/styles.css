@@ -80,6 +80,8 @@ p { line-height: 1.75; }
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 6px;
   background: var(--accent);
   color: var(--white);
