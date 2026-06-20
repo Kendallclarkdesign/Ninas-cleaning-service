@@ -26,10 +26,11 @@ function initNav() {
   });
 
   // Active nav link
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const file = window.location.pathname.split('/').pop() || 'index.html';
+  const inBlog = window.location.pathname.includes('/blog/');
+  const currentPage = inBlog ? 'blog' : (file === 'index.html' ? 'home' : file.replace('.html', ''));
   document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (link.dataset.page === currentPage) {
       link.classList.add('active');
     }
   });

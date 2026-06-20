@@ -1,13 +1,21 @@
+// Pages under /blog/ need "../" to reach root-level pages, and a
+// same-directory link back to the blog index instead of "blog/index.html".
+const IN_BLOG = window.location.pathname.includes('/blog/');
+const BASE = IN_BLOG ? '../' : '';
+const BLOG_HREF = IN_BLOG ? 'index.html' : 'blog/index.html';
+
 // Shared navigation HTML
 const NAV_HTML = `
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">Nina's <em>Cleaning</em></a>
+    <a href="${BASE}index.html" class="nav-logo" data-page="home">Nina's <em>Cleaning</em></a>
     <div class="nav-links">
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="book.html" class="btn-primary nav-cta">Book Now</a>
+      <a href="${BASE}services.html" data-page="services">Services</a>
+      <a href="${BASE}about.html" data-page="about">About</a>
+      <a href="${BASE}reviews.html" data-page="reviews">Reviews</a>
+      <a href="${BLOG_HREF}" data-page="blog">Blog</a>
+      <a href="${BASE}contact.html" data-page="contact">Contact</a>
+      <a href="${BASE}book.html" class="btn-primary nav-cta" data-page="book">Book Now</a>
     </div>
     <button class="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -15,12 +23,14 @@ const NAV_HTML = `
   </div>
 </nav>
 <div class="mobile-menu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <a href="${BASE}index.html" data-page="home">Home</a>
+  <a href="${BASE}services.html" data-page="services">Services</a>
+  <a href="${BASE}about.html" data-page="about">About</a>
+  <a href="${BASE}reviews.html" data-page="reviews">Reviews</a>
+  <a href="${BLOG_HREF}" data-page="blog">Blog</a>
+  <a href="${BASE}contact.html" data-page="contact">Contact</a>
   <a href="https://www.facebook.com/p/Ninas-Cleaning-Service-61555247232431/" target="_blank" rel="noopener noreferrer" style="font-size:22px;opacity:.6">Facebook</a>
-  <a href="book.html" class="btn-primary">Book Now</a>
+  <a href="${BASE}book.html" class="btn-primary" data-page="book">Book Now</a>
 </div>
 `;
 
@@ -40,11 +50,13 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <div class="footer-col-title">Pages</div>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About Nina</a></li>
-          <li><a href="book.html">Book Now</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="${BASE}index.html">Home</a></li>
+          <li><a href="${BASE}services.html">Services</a></li>
+          <li><a href="${BASE}about.html">About Nina</a></li>
+          <li><a href="${BASE}reviews.html">Reviews</a></li>
+          <li><a href="${BLOG_HREF}">Blog</a></li>
+          <li><a href="${BASE}book.html">Book Now</a></li>
+          <li><a href="${BASE}contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -60,7 +72,7 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <div class="footer-col-title">Service Area</div>
         <p style="font-size:12px">Bernville &middot; Womelsdorf &middot; Robesonia &middot; Myerstown &middot; Strausstown &middot; and surrounding areas</p>
-        <a href="book.html" class="btn-primary" style="margin-top:1rem;font-size:12px;padding:10px 18px">Get a Free Quote</a>
+        <a href="${BASE}book.html" class="btn-primary" style="margin-top:1rem;font-size:12px;padding:10px 18px">Get a Free Quote</a>
       </div>
     </div>
   </div>
@@ -76,7 +88,7 @@ const FOOTER_HTML = `
 // Sticky CTA HTML (mobile only)
 const STICKY_CTA_HTML = `
 <div class="sticky-cta">
-  <a href="book.html" class="btn-primary">Book Now</a>
+  <a href="${BASE}book.html" class="btn-primary">Book Now</a>
   <span class="sticky-cta-note">Free quote &middot; Nina responds in 24hrs</span>
 </div>
 `;

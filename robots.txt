@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ninas-cleaning-service.netlify.app/sitemap.xml
