@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://ninas-cleaning-service.netlify.app/book.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,6 +17,34 @@
 
   <main class="page-content page-content-bottom">
 
+    <!-- ── HERO ── -->
+    <section class="split-hero">
+      <div class="split-hero-photo">
+        <img
+          src="images/living-room-fireplace.webp"
+          alt="Spotless living room cleaned by Nina's Cleaning Service"
+          width="680" height="510"
+          loading="eager"
+        >
+        <svg class="split-spark" style="top:14%; right:12%; opacity:.55;" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L14.09 9.91L22 12L14.09 14.09L12 22L9.91 14.09L2 12L9.91 9.91Z"/></svg>
+        <div class="split-hero-caption">Bernville &amp; Berks County, PA</div>
+      </div>
+      <div class="split-hero-panel">
+        <svg class="split-spark" style="top:12%; right:10%; opacity:.3;" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L14.09 9.91L22 12L14.09 14.09L12 22L9.91 14.09L2 12L9.91 9.91Z"/></svg>
+        <svg class="split-spark blue" style="bottom:16%; right:18%; opacity:.2;" width="44" height="44" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L14.09 9.91L22 12L14.09 14.09L12 22L9.91 14.09L2 12L9.91 9.91Z"/></svg>
+        <img class="split-hero-logo" src="images/logo-badge.png" alt="Nina's Cleaning Service" width="140" height="104">
+        <h1>Request a free quote.</h1>
+        <p class="split-hero-sub">Fill out the form and Nina will be in touch within 24 hours with a custom quote for your home.</p>
+        <div class="split-hero-actions">
+          <a href="#book-form-heading" class="btn-primary">Fill Out the Form ↓</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-pill"><span class="stars">★★★★★</span> 4.9 on Google</div>
+          <div class="trust-pill">Responds in 24hrs</div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="container">
 
@@ -24,16 +52,6 @@
 
           <!-- Trust Column -->
           <div class="book-trust fade-up">
-            <div>
-              <span class="eyebrow">Get In Touch</span>
-              <h1 style="font-size:clamp(32px,5vw,48px)">Book a Cleaning</h1>
-              <div class="hero-stars" style="margin-top:.75rem">
-                <span class="stars">★★★★★</span>
-                <span class="rating" style="color:var(--text-muted)">4.9 · Nina responds in 24hrs</span>
-              </div>
-              <p style="color:var(--text-muted);margin-top:.75rem;font-size:14px">Fill out the form and Nina will be in touch within 24 hours with a custom quote for your home.</p>
-            </div>
-
             <div class="book-trust-review">
               <div class="review-stars">★★★★★</div>
               <p class="review-text">"Nina does a fantastic job cleaning my townhome. The kitchen and bathrooms are spotless. The floors shine. Rugs are completely clean. She brings her own professional equipment."</p>
@@ -56,7 +74,7 @@
 
           <!-- Form -->
           <div class="book-form fade-up">
-            <h2>Request a Quote</h2>
+            <h2 id="book-form-heading">Request a Quote</h2>
             <form id="booking-form" class="form-stack" action="https://formspree.io/f/xvznarag" method="POST" novalidate>
 
               <!-- Formspree config -->

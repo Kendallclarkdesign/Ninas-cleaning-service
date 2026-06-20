@@ -8,7 +8,7 @@ const BLOG_HREF = IN_BLOG ? 'index.html' : 'blog/index.html';
 const NAV_HTML = `
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="${BASE}index.html" class="nav-logo" data-page="home">Nina's <em>Cleaning</em></a>
+    <a href="${BASE}index.html" class="nav-logo" data-page="home"><img src="${BASE}images/logo-badge.png" alt="Nina's Cleaning Service" width="44" height="33"></a>
     <div class="nav-links">
       <a href="${BASE}services.html" data-page="services">Services</a>
       <a href="${BASE}about.html" data-page="about">About</a>
@@ -40,7 +40,7 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-logo">Nina's <em>Cleaning</em></div>
+        <img class="footer-logo-img" src="${BASE}images/logo-badge.png" alt="Nina's Cleaning Service" width="56" height="42">
         <p class="footer-tagline">Professional residential cleaning serving Bernville and surrounding Berks County, PA.</p>
         <div class="footer-stars">
           <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -63,8 +63,8 @@ const FOOTER_HTML = `
         <div class="footer-col-title">Contact</div>
         <p><a href="tel:+17177080026">(717) 708-0026</a></p>
         <p style="margin-top:.4rem"><a href="mailto:fayewiczn@gmail.com">fayewiczn@gmail.com</a></p>
-        <p style="margin-top:.4rem;font-size:12px;color:rgba(247,243,238,.4)">203 Tulpehocken St<br>Bernville, PA 19506</p>
-        <a href="https://www.facebook.com/p/Ninas-Cleaning-Service-61555247232431/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;margin-top:.75rem;font-size:12px;color:rgba(247,243,238,.5);transition:color .15s">
+        <p style="margin-top:.4rem;font-size:12px;color:rgba(244,240,232,.4)">203 Tulpehocken St<br>Bernville, PA 19506</p>
+        <a href="https://www.facebook.com/p/Ninas-Cleaning-Service-61555247232431/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;margin-top:.75rem;font-size:12px;color:rgba(244,240,232,.5);transition:color .15s">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           Facebook
         </a>
@@ -79,7 +79,7 @@ const FOOTER_HTML = `
   <div class="container">
     <div class="footer-bottom">
       <p>&copy; 2025 Nina's Cleaning Service. All rights reserved.</p>
-      <p>Built by <a href="#" style="color:rgba(247,243,238,.4)">21 Connect Digital</a></p>
+      <p>Built by <a href="#" style="color:rgba(244,240,232,.4)">21 Connect Digital</a></p>
     </div>
   </div>
 </footer>
