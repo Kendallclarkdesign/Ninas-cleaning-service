@@ -8,7 +8,10 @@ const BLOG_HREF = IN_BLOG ? 'index.html' : 'blog/index.html';
 const NAV_HTML = `
 <nav class="site-nav">
   <div class="nav-inner">
-    <a href="${BASE}index.html" class="nav-logo" data-page="home"><img src="${BASE}images/logo-badge.png" alt="Nina's Cleaning Service" width="44" height="33"></a>
+    <a href="${BASE}index.html" class="nav-logo" data-page="home">
+      <img src="${BASE}images/logo-badge.png" alt="" width="44" height="33">
+      <span class="nav-logo-text">Nina's Cleaning Service</span>
+    </a>
     <div class="nav-links">
       <a href="${BASE}services.html" data-page="services">Services</a>
       <a href="${BASE}about.html" data-page="about">About</a>
