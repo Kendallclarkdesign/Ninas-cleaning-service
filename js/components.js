@@ -80,7 +80,7 @@ const FOOTER_HTML = `
       </div>
       <div class="footer-col">
         <div class="footer-col-title">Service Area</div>
-        <p style="font-size:12px">Bernville &middot; Womelsdorf &middot; Robesonia &middot; Myerstown &middot; Strausstown &middot; and surrounding areas</p>
+        <p style="font-size:12px">Bernville &middot; Womelsdorf &middot; Robesonia &middot; Berks County &middot; Lehigh Valley &middot; Lancaster &middot; and surrounding areas</p>
         <a href="${BASE}book.html" class="btn-primary" style="margin-top:1rem;font-size:12px;padding:10px 18px">Get a Free Quote</a>
       </div>
     </div>
