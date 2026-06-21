@@ -45,6 +45,7 @@ ul { list-style: none; }
 
   --container:  1200px;
   --nav-h:      68px;
+  --phone-bar-h: 34px;
 }
 
 /* ─── BASE ─── */
@@ -187,6 +188,27 @@ select.form-field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http
   transition: box-shadow .2s ease;
 }
 .site-nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,.2); }
+.phone-bar {
+  position: fixed;
+  top: var(--nav-h); left: 0; right: 0;
+  height: var(--phone-bar-h);
+  background: var(--accent);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.phone-bar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--dark-footer);
+  letter-spacing: .02em;
+}
+.phone-bar a:hover { text-decoration: underline; }
+.phone-bar svg { flex-shrink: 0; }
 .nav-inner {
   height: 100%;
   display: flex;
@@ -298,13 +320,13 @@ select.form-field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http
 .sticky-cta-note { font-size: 11px; color: rgba(244,240,232,.55); }
 
 /* ─── PAGE WRAPPER ─── */
-.page-content { padding-top: var(--nav-h); }
+.page-content { padding-top: calc(var(--nav-h) + var(--phone-bar-h)); }
 .page-content-bottom { padding-bottom: 60px; }
 @media (min-width: 768px) { .page-content-bottom { padding-bottom: 0; } }
 
 /* ─── HERO ─── */
 .hero {
-  min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100vh - var(--nav-h) - var(--phone-bar-h));
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -313,7 +335,7 @@ select.form-field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http
   position: relative;
 }
 @media (min-width: 900px) {
-  .hero { grid-template-columns: 1fr 1fr; padding: 0; min-height: calc(100vh - var(--nav-h)); }
+  .hero { grid-template-columns: 1fr 1fr; padding: 0; min-height: calc(100vh - var(--nav-h) - var(--phone-bar-h)); }
 }
 .hero-copy { display: flex; flex-direction: column; gap: 1.25rem; }
 .hero-stars { display: flex; align-items: center; gap: 6px; }
@@ -334,7 +356,7 @@ select.form-field { background-image: url("data:image/svg+xml,%3Csvg xmlns='http
 .split-hero {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: calc(100vh - var(--nav-h));
+  min-height: calc(100vh - var(--nav-h) - var(--phone-bar-h));
   padding: 0;
 }
 @media (min-width: 900px) {

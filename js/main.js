@@ -120,8 +120,10 @@ function initSmoothScroll() {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        const navH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'));
-        const top = target.getBoundingClientRect().top + window.scrollY - navH - 16;
+        const rootStyle = getComputedStyle(document.documentElement);
+        const navH = parseInt(rootStyle.getPropertyValue('--nav-h'));
+        const phoneBarH = parseInt(rootStyle.getPropertyValue('--phone-bar-h'));
+        const top = target.getBoundingClientRect().top + window.scrollY - navH - phoneBarH - 16;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
