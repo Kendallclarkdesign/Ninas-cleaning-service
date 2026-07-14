@@ -26,11 +26,13 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://ninascleaningservicellc.com/#business",
     "name": "Nina's Cleaning Service",
+    "legalName": "Nina's Cleaning Service LLC",
     "description": "Professional residential cleaning service serving Bernville and surrounding Berks County, PA.",
+    "foundingDate": "2025",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "203 Tulpehocken St",
       "addressLocality": "Bernville",
       "addressRegion": "PA",
       "postalCode": "19506",
@@ -40,15 +42,38 @@
     "email": "fayewiczn@gmail.com",
     "url": "https://ninascleaningservicellc.com/",
     "sameAs": ["https://www.facebook.com/p/Ninas-Cleaning-Service-61555247232431/"],
-    "image": "images/hero-kitchen-island.webp",
+    "image": "https://ninascleaningservicellc.com/images/hero-kitchen-island.webp",
     "priceRange": "$$",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "reviewCount": "8",
       "bestRating": "5"
     },
-    "areaServed": ["Bernville, PA", "Womelsdorf, PA", "Robesonia, PA", "Berks County, PA", "Lehigh Valley, PA", "Lancaster, PA"]
+    "areaServed": [
+      { "@type": "City", "name": "Bernville", "containedInPlace": { "@type": "AdministrativeArea", "name": "Berks County, PA" } },
+      { "@type": "City", "name": "Womelsdorf", "containedInPlace": { "@type": "AdministrativeArea", "name": "Berks County, PA" } },
+      { "@type": "City", "name": "Robesonia", "containedInPlace": { "@type": "AdministrativeArea", "name": "Berks County, PA" } },
+      { "@type": "City", "name": "Wernersville", "containedInPlace": { "@type": "AdministrativeArea", "name": "Berks County, PA" } },
+      { "@type": "City", "name": "Reading", "containedInPlace": { "@type": "AdministrativeArea", "name": "Berks County, PA" } },
+      { "@type": "AdministrativeArea", "name": "Berks County, PA" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cleaning Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Regular Home Cleaning", "areaServed": "Berks County, PA" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deep Cleaning", "areaServed": "Berks County, PA" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Move In / Move Out Cleaning", "areaServed": "Berks County, PA" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Post-Construction Cleaning", "areaServed": "Berks County, PA" } }
+      ]
+    }
   }
   </script>
 </head>
@@ -171,6 +196,24 @@
       </div>
     </section>
 
+    <!-- ── SERVICE AREA ── -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header center fade-up">
+          <span class="eyebrow">Where Nina Cleans</span>
+          <h2>Serving Bernville and the surrounding towns.</h2>
+          <p>Nina cleans homes throughout Berks County. Find your town below for local details.</p>
+        </div>
+        <div class="area-grid fade-up" style="max-width:520px;margin:0 auto">
+          <a href="locations/bernville.html" class="area-tag">Bernville, PA</a>
+          <a href="locations/womelsdorf.html" class="area-tag">Womelsdorf, PA</a>
+          <a href="locations/robesonia.html" class="area-tag">Robesonia, PA</a>
+          <a href="locations/wernersville.html" class="area-tag">Wernersville, PA</a>
+          <a href="locations/reading.html" class="area-tag">Reading, PA</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ── REVIEWS ── -->
     <section class="reviews-section" id="reviews">
       <div class="container">
@@ -239,7 +282,7 @@
         <div class="fade-up">
           <span class="eyebrow">Ready to get started?</span>
           <h2>Your spotless home is one call away.</h2>
-          <p>Nina responds within 24 hours. No commitment required, just a free quote.</p>
+          <p>Nina responds within 24 hours. No commitment required, just a free quote. Got a question first? <a href="faq.html" style="text-decoration:underline">Check the FAQ</a>.</p>
           <a href="book.html" class="btn-primary">Book a Cleaning Today →</a>
         </div>
       </div>

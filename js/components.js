@@ -1,8 +1,10 @@
-// Pages under /blog/ need "../" to reach root-level pages, and a
-// same-directory link back to the blog index instead of "blog/index.html".
+// Pages under /blog/ or /locations/ need "../" to reach root-level pages.
+// Blog pages link back to the blog index with a same-directory link
+// instead of "blog/index.html"; locations pages reach it via "../blog/index.html".
 const IN_BLOG = window.location.pathname.includes('/blog/');
-const BASE = IN_BLOG ? '../' : '';
-const BLOG_HREF = IN_BLOG ? 'index.html' : 'blog/index.html';
+const IN_LOCATIONS = window.location.pathname.includes('/locations/');
+const BASE = (IN_BLOG || IN_LOCATIONS) ? '../' : '';
+const BLOG_HREF = IN_BLOG ? 'index.html' : (IN_LOCATIONS ? '../blog/index.html' : 'blog/index.html');
 
 // Shared navigation HTML
 const NAV_HTML = `
@@ -17,6 +19,7 @@ const NAV_HTML = `
       <a href="${BASE}about.html" data-page="about">About</a>
       <a href="${BASE}reviews.html" data-page="reviews">Reviews</a>
       <a href="${BLOG_HREF}" data-page="blog">Blog</a>
+      <a href="${BASE}faq.html" data-page="faq">FAQ</a>
       <a href="${BASE}contact.html" data-page="contact">Contact</a>
       <a href="${BASE}book.html" class="btn-primary nav-cta" data-page="book">Book Now</a>
     </div>
@@ -37,6 +40,7 @@ const NAV_HTML = `
   <a href="${BASE}about.html" data-page="about">About</a>
   <a href="${BASE}reviews.html" data-page="reviews">Reviews</a>
   <a href="${BLOG_HREF}" data-page="blog">Blog</a>
+  <a href="${BASE}faq.html" data-page="faq">FAQ</a>
   <a href="${BASE}contact.html" data-page="contact">Contact</a>
   <a href="https://www.facebook.com/p/Ninas-Cleaning-Service-61555247232431/" target="_blank" rel="noopener noreferrer" style="font-size:22px;opacity:.6">Facebook</a>
   <a href="${BASE}book.html" class="btn-primary" data-page="book">Book Now</a>
@@ -64,6 +68,7 @@ const FOOTER_HTML = `
           <li><a href="${BASE}about.html">About Nina</a></li>
           <li><a href="${BASE}reviews.html">Reviews</a></li>
           <li><a href="${BLOG_HREF}">Blog</a></li>
+          <li><a href="${BASE}faq.html">FAQ</a></li>
           <li><a href="${BASE}book.html">Book Now</a></li>
           <li><a href="${BASE}contact.html">Contact</a></li>
         </ul>
