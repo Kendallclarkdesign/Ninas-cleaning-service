@@ -84,8 +84,11 @@ function initForm() {
     try {
       const response = await fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json'
+        },
+        body: new URLSearchParams(new FormData(form)).toString()
       });
 
       if (response.ok) {

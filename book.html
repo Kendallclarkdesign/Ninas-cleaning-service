@@ -90,12 +90,11 @@
           <!-- Form -->
           <div class="book-form fade-up">
             <h2 id="book-form-heading">Request a Quote</h2>
-            <form id="booking-form" class="form-stack" action="https://formspree.io/f/xvznarag" method="POST" novalidate>
+            <form id="booking-form" class="form-stack" name="booking" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
 
-              <!-- Formspree config -->
-              <input type="hidden" name="_subject" value="New Booking Request from Nina's Cleaning Service Website">
-              <input type="hidden" name="_next" value="thank-you.html">
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+              <!-- Netlify Forms config: submissions are emailed to Nina from the Netlify dashboard -->
+              <input type="hidden" name="form-name" value="booking">
+              <p hidden aria-hidden="true"><label>Leave this field empty: <input name="bot-field"></label></p>
 
               <div class="form-row">
                 <div class="form-group">

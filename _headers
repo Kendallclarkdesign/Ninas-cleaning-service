@@ -1,0 +1,17 @@
+# Security headers for Nina's Cleaning Service (Netlify reads this file on deploy)
+# Applies to every page and asset on the site.
+/*
+  # Stop the site from being framed on other domains (clickjacking protection)
+  X-Frame-Options: SAMEORIGIN
+  # Block MIME-type sniffing
+  X-Content-Type-Options: nosniff
+  # Don't leak full URLs to other sites in the Referer header
+  Referrer-Policy: strict-origin-when-cross-origin
+  # Turn off browser features the site never uses
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), usb=()
+  # Force HTTPS for 2 years, including subdomains
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  # Content Security Policy: only these sources are allowed to load.
+  # unsafe-inline is required because gtag and JSON-LD are inline; the site
+  # renders no user input to the DOM, so inline-script XSS risk is minimal.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://www.google.com https://*.google.com https://*.gstatic.com https://*.google-analytics.com; frame-src https://www.google.com; connect-src 'self' https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; upgrade-insecure-requests
