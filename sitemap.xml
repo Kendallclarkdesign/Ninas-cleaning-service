@@ -61,6 +61,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ninascleaningservicellc.com/locations/wyomissing.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ninascleaningservicellc.com/locations/sinking-spring.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ninascleaningservicellc.com/locations/west-lawn.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ninascleaningservicellc.com/locations/shillington.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ninascleaningservicellc.com/locations/mohnton.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ninascleaningservicellc.com/blog/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
