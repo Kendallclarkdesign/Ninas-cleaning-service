@@ -1,0 +1,35 @@
+# Netlify serves foo.html automatically at /foo with no redirect, which
+# creates a duplicate URL for every page on the site. That splits GA4
+# pageview data and dilutes the canonical tag's SEO signal. Force every
+# clean/extensionless request to 301 into the canonical .html URL instead.
+
+/index.html                                       /                                                  301!
+/blog/index.html                                  /blog/                                             301!
+
+/about                                            /about.html                                        301!
+/book                                             /book.html                                         301!
+/contact                                          /contact.html                                      301!
+/faq                                              /faq.html                                          301!
+/reviews                                          /reviews.html                                      301!
+/services                                         /services.html                                     301!
+/thank-you                                        /thank-you.html                                    301!
+
+/blog/benefits-of-recurring-cleaning-service      /blog/benefits-of-recurring-cleaning-service.html      301!
+/blog/deep-cleaning-vs-regular-cleaning           /blog/deep-cleaning-vs-regular-cleaning.html           301!
+/blog/home-cleaning-tips-berks-county             /blog/home-cleaning-tips-berks-county.html             301!
+/blog/how-often-should-you-hire-a-house-cleaner   /blog/how-often-should-you-hire-a-house-cleaner.html   301!
+/blog/how-to-find-a-trustworthy-house-cleaner     /blog/how-to-find-a-trustworthy-house-cleaner.html     301!
+/blog/how-to-prepare-for-a-house-cleaner          /blog/how-to-prepare-for-a-house-cleaner.html          301!
+/blog/move-out-cleaning-checklist-pennsylvania    /blog/move-out-cleaning-checklist-pennsylvania.html    301!
+/blog/what-does-a-house-cleaner-include           /blog/what-does-a-house-cleaner-include.html           301!
+
+/locations/bernville                              /locations/bernville.html                          301!
+/locations/mohnton                                /locations/mohnton.html                            301!
+/locations/reading                                /locations/reading.html                            301!
+/locations/robesonia                              /locations/robesonia.html                          301!
+/locations/shillington                            /locations/shillington.html                        301!
+/locations/sinking-spring                         /locations/sinking-spring.html                     301!
+/locations/wernersville                           /locations/wernersville.html                       301!
+/locations/west-lawn                              /locations/west-lawn.html                          301!
+/locations/womelsdorf                             /locations/womelsdorf.html                         301!
+/locations/wyomissing                             /locations/wyomissing.html                         301!
