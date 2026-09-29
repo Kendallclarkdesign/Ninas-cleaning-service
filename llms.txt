@@ -1,0 +1,30 @@
+# Nina's Cleaning Service
+
+> Professional residential, estate, and commercial cleaning serving Bernville and Berks County, Pennsylvania. Nina responds to all inquiries within 24 hours.
+
+Nina's Cleaning Service is a residential and commercial cleaning business based in Bernville, PA, serving homes and businesses throughout Berks County. Services include regular home cleaning, deep cleaning, move in/move out cleaning, post-construction cleaning, estate cleaning, and commercial cleaning, with professional-grade floor cleaning available as an add-on.
+
+## Core pages
+
+- [Home](https://ninascleaningservicellc.com/index.html): Overview of services and service area.
+- [Services](https://ninascleaningservicellc.com/services.html): Full list of cleaning services, including regular home cleaning, deep cleaning, move in/move out cleaning, post-construction cleaning, estate cleaning, and commercial cleaning.
+- [About](https://ninascleaningservicellc.com/about.html): About Nina and her approach to cleaning.
+- [FAQ](https://ninascleaningservicellc.com/faq.html): Answers to common questions about booking, pricing, and what's included.
+- [Contact](https://ninascleaningservicellc.com/contact.html): Phone (717) 708-0026, email info@ninascleaningservicellc.com, or the booking form. Nina responds within 24 hours.
+- [Book a Cleaning](https://ninascleaningservicellc.com/book.html): Request a free quote.
+- [Blog](https://ninascleaningservicellc.com/blog/index.html): Cleaning tips and local advice for Berks County homeowners.
+
+## Service area
+
+Nina's Cleaning Service serves the following Berks County, PA towns, each with its own local page:
+
+- [Bernville](https://ninascleaningservicellc.com/locations/bernville.html)
+- [Mohnton](https://ninascleaningservicellc.com/locations/mohnton.html)
+- [Reading](https://ninascleaningservicellc.com/locations/reading.html)
+- [Robesonia](https://ninascleaningservicellc.com/locations/robesonia.html)
+- [Shillington](https://ninascleaningservicellc.com/locations/shillington.html)
+- [Sinking Spring](https://ninascleaningservicellc.com/locations/sinking-spring.html)
+- [Wernersville](https://ninascleaningservicellc.com/locations/wernersville.html)
+- [West Lawn](https://ninascleaningservicellc.com/locations/west-lawn.html)
+- [Womelsdorf](https://ninascleaningservicellc.com/locations/womelsdorf.html)
+- [Wyomissing](https://ninascleaningservicellc.com/locations/wyomissing.html)
