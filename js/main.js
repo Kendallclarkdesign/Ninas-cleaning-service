@@ -52,7 +52,7 @@ function initAnimations() {
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 }
 
-// ─── FORM SUBMISSION — Formspree ───
+// ─── FORM SUBMISSION — Netlify Forms ───
 function initForm() {
   const form = document.getElementById('booking-form');
   if (!form) return;
@@ -82,7 +82,7 @@ function initForm() {
     submitBtn.style.opacity = '.7';
 
     try {
-      const response = await fetch(form.action, {
+      const response = await fetch('/thank-you.html', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
