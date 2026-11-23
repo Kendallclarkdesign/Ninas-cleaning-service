@@ -12,7 +12,7 @@ Nina's Cleaning Service is a residential and commercial cleaning business based 
 - [FAQ](https://ninascleaningservicellc.com/faq.html): Answers to common questions about booking, pricing, and what's included.
 - [Contact](https://ninascleaningservicellc.com/contact.html): Phone (717) 708-0026, email info@ninascleaningservicellc.com, or the booking form. Nina responds within 24 hours.
 - [Book a Cleaning](https://ninascleaningservicellc.com/book.html): Request a free quote.
-- [Blog](https://ninascleaningservicellc.com/blog/index.html): Cleaning tips and local advice for Berks County homeowners.
+- [Blog](https://ninascleaningservicellc.com/blog/): Cleaning tips and local advice for Berks County homeowners.
 
 ## Service area
 

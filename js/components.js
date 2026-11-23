@@ -1,10 +1,11 @@
 // Pages under /blog/ or /locations/ need "../" to reach root-level pages.
-// Blog pages link back to the blog index with a same-directory link
-// instead of "blog/index.html"; locations pages reach it via "../blog/index.html".
+// The blog index lives at /blog/ (Netlify 301s /blog/index.html there), so every
+// link points at the final address to avoid a redirect hop: "./" from blog pages,
+// "../blog/" from locations pages, "blog/" from root pages.
 const IN_BLOG = window.location.pathname.includes('/blog/');
 const IN_LOCATIONS = window.location.pathname.includes('/locations/');
 const BASE = (IN_BLOG || IN_LOCATIONS) ? '../' : '';
-const BLOG_HREF = IN_BLOG ? 'index.html' : (IN_LOCATIONS ? '../blog/index.html' : 'blog/index.html');
+const BLOG_HREF = IN_BLOG ? './' : (IN_LOCATIONS ? '../blog/' : 'blog/');
 
 // Shared navigation HTML
 const NAV_HTML = `
